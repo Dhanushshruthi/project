@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>search in javascript</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+<div class="banner"></div>
+<body bgcolor="olive">
+</head>
+<body>
+<center><div class="container-fluid">
+<div class="container">
+<div class="search">
+<h1>All Products</h1>
+<input type="text" name="" id="find" placeholder="search here...." onkeyup="search()">
+</div></center>
+<div class="product-list">
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-1.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\beabea.html">Bebe Bloom Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-2.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\quaherbal.html">Que Herbal Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-3.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\greentea.html">green Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-4.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\blackossum.html">Black Assam Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-5.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\icetea.html"> Ice Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-6.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\greentulasi.html">Green Tulsi Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-7.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\spicetea.html">Spice Tea</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+<div class="product">
+<center><img src="https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/product/product-8.jpg">
+<h3><a href="C:\Users\dhanu\OneDrive\Desktop\instantteamix.html">Instant Tea Mix</a></h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+<p><center><button type="submit">ADD TO CART</button></center></p>
+<p><center><button type="submit">BUY NOW</button></center></p>
+</div></center>
+</div>
+</div>
+</div>
+<!-- javascript -->
+<script type="text/javascript">
+function search() {
+let filter = document.getElementById('find').value.toUpperCase();
+let item = document.querySelectorAll('.product');
+let l = document.getElementsByTagName('h3');
+for(var i = 0;i<=l.length;i++){
+let a=item[i].getElementsByTagName('h3')[0];
+let value=a.innerHTML || a.innerText || a.textContent;
+if(value.toUpperCase().indexOf(filter) > -1) {
+item[i].style.display="";
+}
+else
+{
+item[i].style.display="none";
+}
+}
+}
+</script>
+</body>
+</html>

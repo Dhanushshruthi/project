@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(s3.jpg);
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #009688;
+    text-transform: uppercase;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9)),url(desktop/search.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar{
+    width: 70%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.slowFade {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.slowFade .slide img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 75%;
+    height: auto;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 30s infinite;
+}.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+/* (A) CONTAINER */
+#grid-col {
+    /* (A1) GRID LAYOUT */
+    display: grid;
+   
+    /* (A2) SPECIFY COLUMNS */
+    grid-template-columns: auto auto auto;
+   
+    /* we can also specify exact pixels, percentage, repeat
+    grid-template-columns: 50px 100px 150px;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 100px 20% auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* equal columns */
+  }
+  /* (B) GRID CELLS */
+div.cell {
+    background: LightBlue;
+    border: 1px solid Blue;
+    padding: 10px;
+  }
+   
+  /* (C) RESPONSIVE - 1 COLUMN ON SMALL SCREENS */
+  @media screen and (max-width: 640px) {
+    #grid-col { grid-template-columns: 100%; }
+  }
+  
+  
+  
+    
+  
+
